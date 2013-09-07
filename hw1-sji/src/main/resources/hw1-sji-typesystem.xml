@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>hw1-sji-typesystem</name>
+    <description>Type system for 11791 hw1.</description>
+    <version>1.0</version>
+    <vendor>Siping Ji</vendor>
+  <types>
+    <typeDescription>
+      <name>edu.cmu.lti.f13.hw1.sji.QAAnnotation</name>
+      <description>Base class for other annotations in this type system</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>confidence</name>
+          <description/>
+          <rangeTypeName>uima.cas.Float</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>casProcessorId</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.lti.f13.hw1.sji.Question</name>
+      <description>Question Annotation</description>
+      <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.lti.f13.hw1.sji.Answer</name>
+      <description>Answer Annotation</description>
+      <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>isCorrect</name>
+          <description/>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.lti.f13.hw1.sji.Token</name>
+      <description/>
+      <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.lti.f13.hw1.sji.NGram</name>
+      <description/>
+      <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>elements</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>edu.cmu.lti.f13.hw1.sji.Token</elementType>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>
