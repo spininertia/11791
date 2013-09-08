@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Fri Sep 06 20:34:47 EDT 2013 */
+/* First created by JCasGen Sat Sep 07 22:16:04 EDT 2013 */
 package edu.cmu.lti.f13.hw1.sji;
 
 import org.apache.uima.jcas.JCas;
@@ -10,12 +10,10 @@ import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
-import org.apache.uima.jcas.tcas.Annotation_Type;
-
-/** Question Annotation
+/** sentence
  * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
  * @generated */
-public class Question_Type extends QAAnnotation_Type {
+public class Sentence_Type extends QAAnnotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -23,31 +21,31 @@ public class Question_Type extends QAAnnotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Question_Type.this.useExistingInstance) {
+  			 if (Sentence_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Question_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Sentence_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Question(addr, Question_Type.this);
-  			   Question_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Sentence(addr, Sentence_Type.this);
+  			   Sentence_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Question(addr, Question_Type.this);
+        } else return new Sentence(addr, Sentence_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Question.typeIndexID;
+  public final static int typeIndexID = Sentence.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw1.sji.Question");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw1.sji.Sentence");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public Question_Type(JCas jcas, Type casType) {
+  public Sentence_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

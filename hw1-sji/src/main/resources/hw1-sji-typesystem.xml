@@ -58,5 +58,27 @@
         </featureDescription>
       </features>
     </typeDescription>
+  <typeDescription>
+      <name>edu.cmu.lti.f13.hw1.sji.Sentence</name>
+      <description>sentence</description>
+      <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
+    </typeDescription>
+  <typeDescription>
+      <name>edu.cmu.lti.f13.hw1.sji.AnswerScore</name>
+      <description/>
+      <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>score</name>
+          <description/>
+          <rangeTypeName>uima.cas.Float</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>answer</name>
+          <description/>
+          <rangeTypeName>edu.cmu.lti.f13.hw1.sji.Answer</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
   </types>
 </typeSystemDescription>

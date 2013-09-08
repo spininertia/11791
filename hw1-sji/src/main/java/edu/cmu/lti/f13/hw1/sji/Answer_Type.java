@@ -12,8 +12,10 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
+import org.apache.uima.jcas.tcas.Annotation_Type;
+
 /** Answer Annotation
- * Updated by JCasGen Fri Sep 06 20:51:20 EDT 2013
+ * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
  * @generated */
 public class Answer_Type extends QAAnnotation_Type {
   /** @generated */

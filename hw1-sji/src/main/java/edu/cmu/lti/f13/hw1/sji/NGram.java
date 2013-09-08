@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.FSArray;
 
 
 /** 
- * Updated by JCasGen Fri Sep 06 20:51:20 EDT 2013
- * XML source: /Users/Chris/git/hw1-sji/hw1-sji/src/main/resources/annotators/testElementAnnotator.xml
+ * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
+ * XML source: /Users/Chris/git/hw1-sji/hw1-sji/src/main/resources/hw1-sji-typesystem.xml
  * @generated */
 public class NGram extends QAAnnotation {
   /** @generated

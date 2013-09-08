@@ -2,10 +2,10 @@
 
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.f13.hw1.sji.annotators.TestElementAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.f13.hw1.sji.annotators.AnswerScoreAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>testElementAnnotator</name>
-    <description>The system will read in the input file as a UIMA CAS and annotate the question and answer spans. Each answer annotation will also record whether or not the answer is correct.</description>
+    <name>answerScoreAnnotator</name>
+    <description/>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
@@ -19,11 +19,13 @@
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
-        <outputs>
+        <inputs>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.f13.hw1.sji.Token</type>
           <type allAnnotatorFeatures="true">edu.cmu.lti.f13.hw1.sji.Question</type>
           <type allAnnotatorFeatures="true">edu.cmu.lti.f13.hw1.sji.Answer</type>
-        <type allAnnotatorFeatures="true">edu.cmu.lti.f13.hw1.sji.Sentence</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.lit.f13.hw1.sji.AnswerScore</type>
         </outputs>
         <languagesSupported/>
       </capability>
