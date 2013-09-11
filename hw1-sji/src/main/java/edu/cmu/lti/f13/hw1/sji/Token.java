@@ -1,39 +1,48 @@
 
-
 /* First created by JCasGen Fri Sep 06 20:34:47 EDT 2013 */
 package edu.cmu.lti.f13.hw1.sji;
 
-import org.apache.uima.jcas.JCas; 
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-
-
-/** 
- * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
+/**
+ * This type refers to a token within the sentence. Updated by JCasGen Tue Sep 10 20:42:20 EDT 2013
  * XML source: /Users/Chris/git/hw1-sji/hw1-sji/src/main/resources/hw1-sji-typesystem.xml
- * @generated */
+ * 
+ * @generated
+ */
 public class Token extends QAAnnotation {
-  /** @generated
-   * @ordered 
+  /**
+   * @generated
+   * @ordered
    */
-  @SuppressWarnings ("hiding")
+  @SuppressWarnings("hiding")
   public final static int typeIndexID = JCasRegistry.register(Token.class);
-  /** @generated
-   * @ordered 
+
+  /**
+   * @generated
+   * @ordered
    */
-  @SuppressWarnings ("hiding")
+  @SuppressWarnings("hiding")
   public final static int type = typeIndexID;
-  /** @generated  */
+
+  /** @generated */
   @Override
-  public              int getTypeIndexID() {return typeIndexID;}
+  public int getTypeIndexID() {return typeIndexID;}
  
-  /** Never called.  Disable default constructor
-   * @generated */
+  /**
+   * Never called. Disable default constructor
+   * 
+   * @generated
+   */
   protected Token() {/* intentionally empty block */}
     
-  /** Internal - constructor used by generator 
-   * @generated */
+  /**
+   * Internal - constructor used by generator
+   * 
+   * @generated
+   */
   public Token(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
@@ -45,7 +54,7 @@ public class Token extends QAAnnotation {
     readObject();   
   } 
 
-  /** @generated */  
+  /** @generated */
   public Token(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
@@ -53,12 +62,9 @@ public class Token extends QAAnnotation {
     readObject();
   }   
 
-  /** <!-- begin-user-doc -->
-    * Write your own initialization here
-    * <!-- end-user-doc -->
+  /** <!-- begin-user-doc --> Write your own initialization here <!-- end-user-doc -->
   @generated modifiable */
-  private void readObject() {/*default - does nothing empty block */}
-     
-}
+  private void readObject() {/* default - does nothing empty block */
+  }
 
-    
+}

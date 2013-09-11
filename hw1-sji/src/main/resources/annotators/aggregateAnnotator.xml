@@ -28,9 +28,9 @@
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>aggregateAnnotator</name>
-    <description/>
+    <description>The aggregate annotator that determines the pipeline of the whole system.</description>
     <version>1.0</version>
-    <vendor/>
+    <vendor>Siping Ji</vendor>
     <configurationParameters searchStrategy="language_fallback"/>
     <configurationParameterSettings/>
     <flowConstraints>

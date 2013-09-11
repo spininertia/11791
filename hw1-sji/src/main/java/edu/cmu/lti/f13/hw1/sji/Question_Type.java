@@ -1,4 +1,3 @@
-
 /* First created by JCasGen Fri Sep 06 20:34:47 EDT 2013 */
 package edu.cmu.lti.f13.hw1.sji;
 
@@ -12,10 +11,13 @@ import org.apache.uima.cas.Type;
 
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** Question Annotation
- * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
- * @generated */
-public class Question_Type extends QAAnnotation_Type {
+/**
+ * This annotation refer to a question in the user input. Updated by JCasGen Tue Sep 10 20:42:20 EDT
+ * 2013
+ * 
+ * @generated
+ */
+public class Question_Type extends Sentence_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -35,25 +37,26 @@ public class Question_Type extends QAAnnotation_Type {
         } else return new Question(addr, Question_Type.this);
   	  }
     };
+
   /** @generated */
-  @SuppressWarnings ("hiding")
+  @SuppressWarnings("hiding")
   public final static int typeIndexID = Question.typeIndexID;
-  /** @generated 
-     @modifiable */
-  @SuppressWarnings ("hiding")
+
+  /**
+   * @generated
+   * @modifiable
+   */
+  @SuppressWarnings("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw1.sji.Question");
 
-
-
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  /**
+   * initialize variables to correspond with Cas Type and Features
+   * 
+   * @generated
+   */
   public Question_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
   }
 }
-
-
-
-    

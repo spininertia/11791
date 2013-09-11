@@ -2,11 +2,13 @@ package edu.cmu.lti.f13.hw1.sji.annotators;
 
 import java.util.Iterator;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import edu.cmu.lti.f13.hw1.sji.Answer;
 import edu.cmu.lti.f13.hw1.sji.AnswerScore;
@@ -14,12 +16,29 @@ import edu.cmu.lti.f13.hw1.sji.NGram;
 import edu.cmu.lti.f13.hw1.sji.Question;
 import edu.cmu.lti.f13.hw1.sji.Token;
 
+/**
+ * AnswerScoreAnnotator - generate AnswerScore annotation.
+ *    Assign Score to answer using NGram overlap strategy or Token overlap strategy
+ * 
+ * @author Chris
+ *
+ */
 public class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
 
+  private String strategy;
+  
+  public void initialize(UimaContext aContext) throws ResourceInitializationException {
+    super.initialize(aContext);
+    strategy = (String) aContext.getConfigParameterValue("Strategy");
+  }
+  
   @Override
   public void process(JCas jCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
-    nGramOverlapScorer(jCas);
+    if (strategy.equals("NGramOverlap"))
+      nGramOverlapScorer(jCas);
+    else
+      tokenOverlapScorer(jCas);
   }
 
   public void tokenOverlapScorer(JCas jCas) {
@@ -29,7 +48,7 @@ public class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
   public void nGramOverlapScorer(JCas jCas) {
     overlapScorer(jCas, NGram.type);
   }
-  
+
   public void overlapScorer(JCas jCas, int type) {
     FSIndex questionIndex = jCas.getAnnotationIndex(Question.type);
     FSIndex answerIndex = jCas.getAnnotationIndex(Answer.type);
@@ -69,7 +88,7 @@ public class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
     }
 
   }
-  
+
   public boolean inSentence(Annotation span, Annotation sentence) {
     return (span.getBegin() >= sentence.getBegin() && span.getEnd() <= sentence.getEnd());
   }

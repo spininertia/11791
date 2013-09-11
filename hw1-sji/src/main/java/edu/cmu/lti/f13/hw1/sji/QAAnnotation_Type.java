@@ -1,4 +1,3 @@
-
 /* First created by JCasGen Fri Sep 06 20:34:47 EDT 2013 */
 package edu.cmu.lti.f13.hw1.sji;
 
@@ -13,9 +12,13 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** Base class for other annotations in this type system
- * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
- * @generated */
+/**
+ * Base class for all other annotation types in this type system. All other annotation classes
+ * inherit this class so that all types contain confidence and casprocessorId features Updated by
+ * JCasGen Tue Sep 10 20:42:20 EDT 2013
+ * 
+ * @generated
+ */
 public class QAAnnotation_Type extends Annotation_Type {
   /** @generated */
   @Override
@@ -36,25 +39,31 @@ public class QAAnnotation_Type extends Annotation_Type {
         } else return new QAAnnotation(addr, QAAnnotation_Type.this);
   	  }
     };
+
   /** @generated */
-  @SuppressWarnings ("hiding")
+  @SuppressWarnings("hiding")
   public final static int typeIndexID = QAAnnotation.typeIndexID;
-  /** @generated 
-     @modifiable */
-  @SuppressWarnings ("hiding")
+
+  /**
+   * @generated
+   * @modifiable
+   */
+  @SuppressWarnings("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw1.sji.QAAnnotation");
- 
+
   /** @generated */
   final Feature casFeat_confidence;
+
   /** @generated */
-  final int     casFeatCode_confidence;
-  /** @generated */ 
+  final int casFeatCode_confidence;
+
+  /** @generated */
   public float getConfidence(int addr) {
         if (featOkTst && casFeat_confidence == null)
       jcas.throwFeatMissing("confidence", "edu.cmu.lti.f13.hw1.sji.QAAnnotation");
     return ll_cas.ll_getFloatValue(addr, casFeatCode_confidence);
   }
-  /** @generated */    
+  /** @generated */
   public void setConfidence(int addr, float v) {
         if (featOkTst && casFeat_confidence == null)
       jcas.throwFeatMissing("confidence", "edu.cmu.lti.f13.hw1.sji.QAAnnotation");
@@ -64,15 +73,17 @@ public class QAAnnotation_Type extends Annotation_Type {
  
   /** @generated */
   final Feature casFeat_casProcessorId;
+
   /** @generated */
-  final int     casFeatCode_casProcessorId;
-  /** @generated */ 
+  final int casFeatCode_casProcessorId;
+
+  /** @generated */
   public String getCasProcessorId(int addr) {
         if (featOkTst && casFeat_casProcessorId == null)
       jcas.throwFeatMissing("casProcessorId", "edu.cmu.lti.f13.hw1.sji.QAAnnotation");
     return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessorId);
   }
-  /** @generated */    
+  /** @generated */
   public void setCasProcessorId(int addr, String v) {
         if (featOkTst && casFeat_casProcessorId == null)
       jcas.throwFeatMissing("casProcessorId", "edu.cmu.lti.f13.hw1.sji.QAAnnotation");
@@ -82,8 +93,11 @@ public class QAAnnotation_Type extends Annotation_Type {
 
 
 
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  /**
+   * initialize variables to correspond with Cas Type and Features
+   * 
+   * @generated
+   */
   public QAAnnotation_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
@@ -98,7 +112,3 @@ public class QAAnnotation_Type extends Annotation_Type {
 
   }
 }
-
-
-
-    

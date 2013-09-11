@@ -69,6 +69,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
             nGram.setEnd(tokenArray.get(end).getEnd());
             nGram.setCasProcessorId(getClass().getName());
             nGram.setConfidence(1.0f);
+            nGram.setElementType(Token.class.getName());
             FSArray elements = new FSArray(jCas, numberOfGrams);
             for (int i = 0; i < numberOfGrams; i++) {
               elements.set(i, tokenArray.get(begin + i));

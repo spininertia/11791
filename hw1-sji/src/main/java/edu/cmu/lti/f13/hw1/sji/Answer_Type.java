@@ -1,4 +1,3 @@
-
 /* First created by JCasGen Fri Sep 06 20:34:47 EDT 2013 */
 package edu.cmu.lti.f13.hw1.sji;
 
@@ -14,10 +13,14 @@ import org.apache.uima.cas.Feature;
 
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** Answer Annotation
- * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
- * @generated */
-public class Answer_Type extends QAAnnotation_Type {
+/**
+ * This annotation refers to an answer in the user input. Note that the span of this annotation does
+ * not include 'A' and the digit that represents whether it is true or not Updated by JCasGen Tue
+ * Sep 10 20:42:20 EDT 2013
+ * 
+ * @generated
+ */
+public class Answer_Type extends Sentence_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -37,25 +40,31 @@ public class Answer_Type extends QAAnnotation_Type {
         } else return new Answer(addr, Answer_Type.this);
   	  }
     };
+
   /** @generated */
-  @SuppressWarnings ("hiding")
+  @SuppressWarnings("hiding")
   public final static int typeIndexID = Answer.typeIndexID;
-  /** @generated 
-     @modifiable */
-  @SuppressWarnings ("hiding")
+
+  /**
+   * @generated
+   * @modifiable
+   */
+  @SuppressWarnings("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw1.sji.Answer");
- 
+
   /** @generated */
   final Feature casFeat_isCorrect;
+
   /** @generated */
-  final int     casFeatCode_isCorrect;
-  /** @generated */ 
+  final int casFeatCode_isCorrect;
+
+  /** @generated */
   public boolean getIsCorrect(int addr) {
         if (featOkTst && casFeat_isCorrect == null)
       jcas.throwFeatMissing("isCorrect", "edu.cmu.lti.f13.hw1.sji.Answer");
     return ll_cas.ll_getBooleanValue(addr, casFeatCode_isCorrect);
   }
-  /** @generated */    
+  /** @generated */
   public void setIsCorrect(int addr, boolean v) {
         if (featOkTst && casFeat_isCorrect == null)
       jcas.throwFeatMissing("isCorrect", "edu.cmu.lti.f13.hw1.sji.Answer");
@@ -65,8 +74,11 @@ public class Answer_Type extends QAAnnotation_Type {
 
 
 
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  /**
+   * initialize variables to correspond with Cas Type and Features
+   * 
+   * @generated
+   */
   public Answer_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
@@ -77,7 +89,3 @@ public class Answer_Type extends QAAnnotation_Type {
 
   }
 }
-
-
-
-    

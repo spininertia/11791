@@ -2,52 +2,54 @@
 
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
     <name>hw1-sji-typesystem</name>
-    <description>Type system for 11791 hw1.</description>
+    <description>This is the type system for a rather simple Question Answering system.
+This system aims to assign answers scores given a specific question.
+The techniques used here are simply token and n-gram matching.</description>
     <version>1.0</version>
     <vendor>Siping Ji</vendor>
   <types>
     <typeDescription>
       <name>edu.cmu.lti.f13.hw1.sji.QAAnnotation</name>
-      <description>Base class for other annotations in this type system</description>
+      <description>Base class for all other annotation types in this type system. All other annotation classes inherit this  class so that all types contain confidence and casprocessorId features</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
           <name>confidence</name>
-          <description/>
+          <description>the confidence score assigned to the annotation by the component</description>
           <rangeTypeName>uima.cas.Float</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>casProcessorId</name>
-          <description/>
+          <description>the name of the component that produced the annotation</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
       <name>edu.cmu.lti.f13.hw1.sji.Question</name>
-      <description>Question Annotation</description>
-      <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
+      <description>This annotation refer to a question in the user input.</description>
+      <supertypeName>edu.cmu.lti.f13.hw1.sji.Sentence</supertypeName>
     </typeDescription>
     <typeDescription>
       <name>edu.cmu.lti.f13.hw1.sji.Answer</name>
-      <description>Answer Annotation</description>
-      <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
+      <description>This annotation refers to an answer in the user input. Note that the span of this annotation does not include 'A' and the digit that represents whether it is true or not</description>
+      <supertypeName>edu.cmu.lti.f13.hw1.sji.Sentence</supertypeName>
       <features>
         <featureDescription>
           <name>isCorrect</name>
-          <description/>
+          <description>This feature indicates whether the answer is true or not to the specific question.</description>
           <rangeTypeName>uima.cas.Boolean</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
       <name>edu.cmu.lti.f13.hw1.sji.Token</name>
-      <description/>
+      <description>This type refers to a token within the sentence.</description>
       <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
     </typeDescription>
     <typeDescription>
       <name>edu.cmu.lti.f13.hw1.sji.NGram</name>
-      <description/>
+      <description>This token refers to a NGram annotation within a sentence</description>
       <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
       <features>
         <featureDescription>
@@ -56,26 +58,31 @@
           <rangeTypeName>uima.cas.FSArray</rangeTypeName>
           <elementType>edu.cmu.lti.f13.hw1.sji.Token</elementType>
         </featureDescription>
+      <featureDescription>
+          <name>elementType</name>
+          <description>This feature refers to the element type in the elements array.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
   <typeDescription>
       <name>edu.cmu.lti.f13.hw1.sji.Sentence</name>
-      <description>sentence</description>
+      <description>This type refer to a sentence annotated in the user input. It's actually the joint of question and answer annotation. This type makes it easy for annotators like token and ngram annotators to treat question and answers uniformally.</description>
       <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
     </typeDescription>
   <typeDescription>
       <name>edu.cmu.lti.f13.hw1.sji.AnswerScore</name>
-      <description/>
+      <description>This annotation represents how likely the system believes that a answer is true for the question.</description>
       <supertypeName>edu.cmu.lti.f13.hw1.sji.QAAnnotation</supertypeName>
       <features>
         <featureDescription>
           <name>score</name>
-          <description/>
+          <description>This feature refers to the score that the system assign to the answer. The higher the score, the more probable the system believes that the answer is true.</description>
           <rangeTypeName>uima.cas.Float</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>answer</name>
-          <description/>
+          <description>This feature refers to the answer being scored.</description>
           <rangeTypeName>edu.cmu.lti.f13.hw1.sji.Answer</rangeTypeName>
         </featureDescription>
       </features>

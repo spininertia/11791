@@ -5,12 +5,13 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.f13.hw1.sji.annotators.NGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>biGramAnnotator</name>
-    <description/>
+    <description>Annotate bi-grams in the sentences.</description>
     <version>1.0</version>
-    <vendor/>
+    <vendor>Siping Ji</vendor>
     <configurationParameters>
       <configurationParameter>
         <name>NumberOfGrams</name>
+        <description>number of grams</description>
         <type>Integer</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>

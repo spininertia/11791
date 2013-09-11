@@ -5,9 +5,10 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.f13.hw1.sji.annotators.NGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>uniGramAnnotator</name>
-    <description/>
+    <description>Annotate unigrams in the sentences.
+A unigram is actually the same as a token.</description>
     <version>1.0</version>
-    <vendor/>
+    <vendor>Siping Ji</vendor>
     <configurationParameters searchStrategy="language_fallback">
       <configurationParameter>
         <name>NumberOfGrams</name>

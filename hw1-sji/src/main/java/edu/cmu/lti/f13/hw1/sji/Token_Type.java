@@ -1,4 +1,3 @@
-
 /* First created by JCasGen Fri Sep 06 20:34:47 EDT 2013 */
 package edu.cmu.lti.f13.hw1.sji;
 
@@ -10,9 +9,11 @@ import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
-/** 
- * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
- * @generated */
+/**
+ * This type refers to a token within the sentence. Updated by JCasGen Tue Sep 10 20:42:20 EDT 2013
+ * 
+ * @generated
+ */
 public class Token_Type extends QAAnnotation_Type {
   /** @generated */
   @Override
@@ -33,25 +34,26 @@ public class Token_Type extends QAAnnotation_Type {
         } else return new Token(addr, Token_Type.this);
   	  }
     };
+
   /** @generated */
-  @SuppressWarnings ("hiding")
+  @SuppressWarnings("hiding")
   public final static int typeIndexID = Token.typeIndexID;
-  /** @generated 
-     @modifiable */
-  @SuppressWarnings ("hiding")
+
+  /**
+   * @generated
+   * @modifiable
+   */
+  @SuppressWarnings("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw1.sji.Token");
 
-
-
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  /**
+   * initialize variables to correspond with Cas Type and Features
+   * 
+   * @generated
+   */
   public Token_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
   }
 }
-
-
-
-    

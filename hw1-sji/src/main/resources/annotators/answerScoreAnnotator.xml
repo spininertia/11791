@@ -5,11 +5,26 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.f13.hw1.sji.annotators.AnswerScoreAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>answerScoreAnnotator</name>
-    <description/>
+    <description>Assign scores to answers using either token overlap strategy or n-gram overlap strategy.</description>
     <version>1.0</version>
     <vendor/>
-    <configurationParameters/>
-    <configurationParameterSettings/>
+    <configurationParameters>
+      <configurationParameter>
+        <name>Strategy</name>
+        <description>the strategy that the system use to assign scores to answers</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>Strategy</name>
+        <value>
+          <string>NGramOverlap</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
         <import name="hw1-sji-typesystem"/>

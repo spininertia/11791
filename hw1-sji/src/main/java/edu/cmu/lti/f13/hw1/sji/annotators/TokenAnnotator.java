@@ -34,20 +34,6 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
         token.addToIndexes();
       }
     }
-//    FSIndex answerIndex = jCas.getAnnotationIndex(Answer.type);
-//    Iterator answerIterator = answerIndex.iterator();
-//    while (answerIterator.hasNext()) {
-//      Answer answer = (Answer) answerIterator.next();
-//      Matcher matcher = tokenPattern.matcher(answer.getCoveredText());
-//      while (matcher.find()) {
-//        Token token = new Token(jCas);
-//        token.setBegin(answer.getBegin() + matcher.start());
-//        token.setEnd(answer.getBegin() + matcher.end());
-//        token.setCasProcessorId(this.getClass().getName());
-//        token.setConfidence(1.0f);
-//        token.addToIndexes();
-//      }
-//    }
   }
 
 }

@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.f13.hw1.sji.annotators.NGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>triGramAnnotator</name>
-    <description/>
+    <description>Annotates tri-grams in the sentences.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters>

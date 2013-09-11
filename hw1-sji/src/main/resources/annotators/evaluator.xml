@@ -5,18 +5,21 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.f13.hw1.sji.annotators.Evaluator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>evaluator</name>
-    <description/>
+    <description>Evaluator of the system.
+1. Rank the sentences according to score;&#13;2. Select the top N sentences where N = the number of correct answers;&#13;3. Measure performance by Precision@N (how many of the top N are correct).</description>
     <version>1.0</version>
-    <vendor/>
+    <vendor>Siping Ji</vendor>
     <configurationParameters>
       <configurationParameter>
         <name>EvaluationPoint</name>
+        <description>Precision cut point.</description>
         <type>Integer</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
       </configurationParameter>
       <configurationParameter>
         <name>OutputFileName</name>
+        <description>Output file path</description>
         <type>String</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>

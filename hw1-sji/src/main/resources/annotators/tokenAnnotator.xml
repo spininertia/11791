@@ -5,9 +5,9 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.f13.hw1.sji.annotators.TokenAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>aeDescriptor</name>
-    <description/>
+    <description>Annotates tokens in sentences.</description>
     <version>1.0</version>
-    <vendor/>
+    <vendor>Siping Ji</vendor>
     <configurationParameters/>
     <configurationParameterSettings/>
     <typeSystemDescription>

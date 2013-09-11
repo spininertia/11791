@@ -1,4 +1,3 @@
-
 /* First created by JCasGen Sat Sep 07 22:16:04 EDT 2013 */
 package edu.cmu.lti.f13.hw1.sji;
 
@@ -10,9 +9,13 @@ import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
-/** sentence
- * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
- * @generated */
+/**
+ * This type refer to a sentence annotated in the user input. It's actually the joint of question
+ * and answer annotation. This type makes it easy for annotators like token and ngram annotators to
+ * treat question and answers uniformally. Updated by JCasGen Tue Sep 10 20:42:20 EDT 2013
+ * 
+ * @generated
+ */
 public class Sentence_Type extends QAAnnotation_Type {
   /** @generated */
   @Override
@@ -33,25 +36,26 @@ public class Sentence_Type extends QAAnnotation_Type {
         } else return new Sentence(addr, Sentence_Type.this);
   	  }
     };
+
   /** @generated */
-  @SuppressWarnings ("hiding")
+  @SuppressWarnings("hiding")
   public final static int typeIndexID = Sentence.typeIndexID;
-  /** @generated 
-     @modifiable */
-  @SuppressWarnings ("hiding")
+
+  /**
+   * @generated
+   * @modifiable
+   */
+  @SuppressWarnings("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw1.sji.Sentence");
 
-
-
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  /**
+   * initialize variables to correspond with Cas Type and Features
+   * 
+   * @generated
+   */
   public Sentence_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
   }
 }
-
-
-
-    

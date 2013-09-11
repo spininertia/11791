@@ -1,4 +1,3 @@
-
 /* First created by JCasGen Sun Sep 08 09:27:18 EDT 2013 */
 package edu.cmu.lti.f13.hw1.sji;
 
@@ -12,8 +11,8 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-/** 
- * Updated by JCasGen Sun Sep 08 09:27:18 EDT 2013
+/** This annotation represents how likely the system believes that a answer is true for the question.
+ * Updated by JCasGen Tue Sep 10 23:01:40 EDT 2013
  * @generated */
 public class AnswerScore_Type extends QAAnnotation_Type {
   /** @generated */
@@ -35,25 +34,31 @@ public class AnswerScore_Type extends QAAnnotation_Type {
         } else return new AnswerScore(addr, AnswerScore_Type.this);
   	  }
     };
+
   /** @generated */
-  @SuppressWarnings ("hiding")
+  @SuppressWarnings("hiding")
   public final static int typeIndexID = AnswerScore.typeIndexID;
-  /** @generated 
-     @modifiable */
-  @SuppressWarnings ("hiding")
+
+  /**
+   * @generated
+   * @modifiable
+   */
+  @SuppressWarnings("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw1.sji.AnswerScore");
- 
+
   /** @generated */
   final Feature casFeat_score;
+
   /** @generated */
-  final int     casFeatCode_score;
-  /** @generated */ 
+  final int casFeatCode_score;
+
+  /** @generated */
   public float getScore(int addr) {
         if (featOkTst && casFeat_score == null)
       jcas.throwFeatMissing("score", "edu.cmu.lti.f13.hw1.sji.AnswerScore");
     return ll_cas.ll_getFloatValue(addr, casFeatCode_score);
   }
-  /** @generated */    
+  /** @generated */
   public void setScore(int addr, float v) {
         if (featOkTst && casFeat_score == null)
       jcas.throwFeatMissing("score", "edu.cmu.lti.f13.hw1.sji.AnswerScore");
@@ -63,15 +68,17 @@ public class AnswerScore_Type extends QAAnnotation_Type {
  
   /** @generated */
   final Feature casFeat_answer;
+
   /** @generated */
-  final int     casFeatCode_answer;
-  /** @generated */ 
+  final int casFeatCode_answer;
+
+  /** @generated */
   public int getAnswer(int addr) {
         if (featOkTst && casFeat_answer == null)
       jcas.throwFeatMissing("answer", "edu.cmu.lti.f13.hw1.sji.AnswerScore");
     return ll_cas.ll_getRefValue(addr, casFeatCode_answer);
   }
-  /** @generated */    
+  /** @generated */
   public void setAnswer(int addr, int v) {
         if (featOkTst && casFeat_answer == null)
       jcas.throwFeatMissing("answer", "edu.cmu.lti.f13.hw1.sji.AnswerScore");
@@ -81,8 +88,11 @@ public class AnswerScore_Type extends QAAnnotation_Type {
 
 
 
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  /**
+   * initialize variables to correspond with Cas Type and Features
+   * 
+   * @generated
+   */
   public AnswerScore_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
@@ -97,7 +107,3 @@ public class AnswerScore_Type extends QAAnnotation_Type {
 
   }
 }
-
-
-
-    
