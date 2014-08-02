@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+	<primitive>true</primitive>
+	<annotatorImplementationName>edu.cmu.deiis.annotators.Evaluator</annotatorImplementationName>
+	<analysisEngineMetaData>
+		<name>evaluator</name>
+		<description>Evaluator of the system.
+			1. Rank the sentences according to score;&#13;2. Select the top N
+			sentences where N = the number of correct answers;&#13;3. Measure
+			performance by Precision@N (how many of the top N are correct).</description>
+		<version>1.0</version>
+		<vendor>Siping Ji</vendor>
+		<configurationParameters>
+			<configurationParameter>
+				<name>OutputFileName</name>
+				<description>Output file path</description>
+				<type>String</type>
+				<multiValued>false</multiValued>
+				<mandatory>false</mandatory>
+			</configurationParameter>
+		</configurationParameters>
+		<configurationParameterSettings>
+			<nameValuePair>
+				<name>OutputFileName</name>
+				<value>
+					<string>console</string>
+				</value>
+			</nameValuePair>
+		</configurationParameterSettings>
+		<typeSystemDescription>
+			<imports>
+				<import name="descriptors.deiis_types"/>
+			</imports>
+		</typeSystemDescription>
+		<typePriorities/>
+		<fsIndexCollection/>
+		<capabilities>
+			<capability>
+				<inputs>
+					<type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
+					<type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+				</inputs>
+				<outputs/>
+				<languagesSupported/>
+			</capability>
+		</capabilities>
+		<operationalProperties>
+			<modifiesCas>true</modifiesCas>
+			<multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+			<outputsNewCASes>false</outputsNewCASes>
+		</operationalProperties>
+	</analysisEngineMetaData>
+	<resourceManagerConfiguration/>
+</analysisEngineDescription>
